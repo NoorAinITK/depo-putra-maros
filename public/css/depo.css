@@ -1,0 +1,201 @@
+:root{--blue:#0091ea;--soft:#d6ecfb;--soft2:#eef7fe;--ink:#111;--muted:#6b7280;--line:#8a8f98;--ok:#16a34a;--bad:#dc2626}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#e9eef3;color:var(--ink)}
+a{color:inherit;text-decoration:none}
+.app{max-width:430px;min-height:100vh;margin:0 auto;background:#fff;position:relative;padding-bottom:78px;box-shadow:0 0 24px rgba(0,0,0,.08)}
+.topbar{background:var(--soft);padding:24px 16px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #000}
+.topbar h1{margin:0;font-size:18px;font-weight:700}
+.topbar .back{font-size:26px;line-height:1}
+.content{padding:16px}
+.section{font-size:14px;font-weight:700;margin:22px 0 10px;letter-spacing:.2px}
+.muted{color:var(--muted);font-size:13px}
+.right{text-align:right}
+
+/* alert */
+.alert{padding:10px 14px;border-radius:10px;margin-bottom:14px;font-size:14px}
+.alert.ok{background:#dcfce7;color:#166534}
+.alert.err{background:#fee2e2;color:#991b1b}
+.alert ul{margin:0;padding-left:18px}
+
+/* card & ringkasan */
+.card{background:var(--soft);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.summary{background:var(--soft);border-radius:18px;padding:18px 20px;display:flex;justify-content:space-between}
+.summary small{display:block;font-weight:700;font-size:14px}
+.summary strong{font-size:20px}
+.menu-big{display:flex;align-items:center;gap:24px;background:var(--soft);border-radius:18px;padding:34px 24px;font-size:22px;font-weight:700;margin-bottom:14px}
+.menu-big .ic{font-size:38px}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.menu-grid a{border:2px solid #7cc8ff;padding:18px 8px;text-align:center;font-weight:700;font-size:16px;background:#fff}
+.menu-grid .ic{display:block;font-size:34px;margin-bottom:6px}
+
+/* kartu transaksi */
+.order{display:flex;align-items:center;gap:12px;border-radius:12px;padding:12px}
+.order .icon{background:var(--blue);width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;flex:none}
+.order .info{flex:1;min-width:0}
+.order .info strong{display:block;font-size:14px}
+.order .info small{color:#374151;font-size:12px}
+.order .amount{text-align:right;font-size:14px}
+.order .amount b{display:block;margin-bottom:4px}
+.badge{display:inline-block;padding:2px 10px;font-size:11px;font-weight:700;color:#fff;background:var(--blue)}
+.badge.belum{background:#f59e0b}
+.badge.menunggu{background:#7cc8ff}
+.badge.diproses{background:#f59e0b}
+.badge.terisi{background:var(--ok)}
+.badge.selesai{background:#6b7280}
+.order-wrap{margin-bottom:14px}
+.order-wrap .order{margin-bottom:6px}
+.actions{display:flex;gap:8px;justify-content:flex-end}
+.actions form{margin:0}
+
+/* tombol */
+.btn,.btn-sm{display:block;width:100%;text-align:center;border:1px solid #333;background:var(--soft);padding:13px;font-weight:700;font-size:14px;border-radius:6px;cursor:pointer;font-family:inherit;color:var(--ink)}
+.btn.primary{background:var(--blue);color:#fff;border:none;border-radius:16px;padding:16px;font-size:16px;font-weight:500}
+.btn.gray{background:#d9d9d9}
+.btn.outline{background:#fff;border-color:var(--line)}
+.btn-sm{width:auto;padding:5px 14px;font-size:12px;display:inline-block}
+.btn-sm.danger{background:#fee2e2;border-color:#fca5a5;color:#991b1b}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.stack>*{margin-bottom:10px}
+
+/* form */
+label.lbl{display:block;font-weight:700;font-size:13px;margin:16px 0 6px}
+.input{width:100%;padding:14px 16px;border:1px solid transparent;border-radius:14px;background:var(--soft);font-size:15px;font-family:inherit}
+.input:focus{outline:2px solid var(--blue)}
+.field-err{color:var(--bad);font-size:12px;margin-top:4px}
+.stepper{display:inline-flex;align-items:center;background:var(--blue);border-radius:12px;color:#fff;overflow:hidden}
+.stepper button{background:none;border:none;color:#fff;font-size:20px;font-weight:700;padding:6px 14px;cursor:pointer}
+.stepper input{width:46px;text-align:center;background:none;border:none;color:#fff;font-size:16px;font-weight:700;-moz-appearance:textfield}
+.stepper input::-webkit-outer-spin-button,.stepper input::-webkit-inner-spin-button{-webkit-appearance:none}
+.product{display:flex;justify-content:space-between;align-items:center;border:1px solid #333;border-radius:14px;background:var(--soft);padding:16px}
+.product b{display:block;font-size:15px}
+.choice{display:flex;gap:18px;flex-wrap:wrap}
+.choice label{display:flex;align-items:center;gap:8px;font-weight:600;cursor:pointer}
+.choice-card{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.choice-card label{background:var(--soft);border-radius:14px;padding:16px 8px;text-align:center;font-weight:700;cursor:pointer;display:block;border:2px solid transparent}
+.choice-card label:has(input:checked){border-color:var(--blue)}
+.choice-card .ic{display:block;font-size:34px}
+.choice-card input{margin-top:8px}
+.pay{display:flex;justify-content:space-between;align-items:center;background:var(--soft);border:1px solid #333;border-radius:14px;padding:18px 20px;margin-bottom:10px;font-size:22px;font-weight:700;cursor:pointer}
+.pay:has(input:checked){border-color:var(--blue);box-shadow:0 0 0 2px var(--blue)}
+.total{display:flex;justify-content:space-between;font-weight:800;font-size:17px;margin:18px 4px 6px;padding-bottom:10px;border-bottom:2px solid var(--blue)}
+.qr-box{background:var(--soft);padding:22px;text-align:center;margin:14px 0;border-radius:6px}
+.qr-box img{width:170px;height:170px;object-fit:contain;background:#fff;border-radius:14px;padding:8px}
+.qr-placeholder{display:inline-block;width:170px;height:170px;background:#fff;border:2px dashed #888;border-radius:14px;padding-top:60px;font-weight:700}
+.qr-placeholder small{display:block;font-weight:400;font-size:10px;padding:0 6px}
+.summary-box{background:var(--soft);border-radius:18px;padding:18px 20px}
+.summary-box .row{display:flex;justify-content:space-between;margin-bottom:12px;font-weight:700;font-size:14px}
+.summary-box .row.t{border-top:1px solid #000;padding-top:10px;font-size:17px;font-weight:800}
+
+/* tab */
+.tabs{display:flex;gap:14px;margin-bottom:12px}
+.tabs a{padding:6px 16px;background:#d9d9d9;font-weight:700;font-size:14px}
+.tabs a.on{background:var(--soft)}
+
+/* laporan */
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--soft);border:1px solid #000;border-radius:12px;padding:12px 14px;text-align:center}
+.stat.hl{background:#7cc8ff}
+.stat strong{display:block;font-size:30px;margin:6px 0}
+.stat small{font-weight:700;font-size:13px;display:block}
+.stat.wide{margin:14px 0}
+.stat-box{background:#fff;border:2px solid var(--blue);padding:12px 14px;min-height:110px}
+.stat-box small{font-weight:700;font-size:13px}
+.stat-box strong{display:block;font-size:26px;margin-top:22px}
+.chart{background:var(--soft);display:flex;align-items:flex-end;justify-content:space-around;height:210px;padding:16px 10px 8px}
+.chart .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;flex:1}
+.chart .bar{width:60%;background:var(--blue);min-height:2px}
+.chart small{font-size:11px;margin-top:6px}
+.detail{background:var(--soft);border-radius:16px;padding:16px 18px}
+.detail .row{display:flex;justify-content:space-between;margin-bottom:12px;font-size:15px}
+.detail .row:last-child{margin-bottom:0}
+.profit{display:flex;justify-content:space-between;font-weight:800;font-size:17px;padding:14px 18px}
+
+/* tabel pengeluaran */
+.list-row{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--soft);padding:12px 14px;border-radius:12px;margin-bottom:10px;font-size:14px}
+
+/* profil */
+.profile-head{display:flex;align-items:center;gap:20px;padding:16px;border-bottom:1px solid #999}
+.avatar{width:84px;height:84px;border-radius:50%;border:1px solid #000;object-fit:cover;background:#cfe6f7;display:grid;place-items:center;font-size:40px;flex:none}
+.profile-head h2{margin:0;font-size:18px}
+.field{background:var(--soft);border:1px solid #888;padding:14px 16px}
+.field small{display:block;font-weight:700;font-size:13px;margin-bottom:12px}
+.field span{font-weight:600;font-size:15px;padding-left:6px}
+
+/* auth */
+.auth{padding:40px 24px;text-align:center}
+.logo-circle{width:150px;height:150px;border-radius:50%;background:#7cc8ff;margin:10px auto 22px;display:grid;place-items:center;font-size:76px}
+.auth h1{font-size:22px;margin:0 0 6px}
+.auth h2{font-size:26px;margin:46px 0 8px}
+.role-card{display:flex;align-items:center;justify-content:space-between;background:var(--soft);border-radius:18px;padding:30px 28px;margin:20px 0;font-weight:700;font-size:18px}
+.role-card .ic{font-size:44px}
+.auth form{text-align:left;margin-top:30px}
+.auth .link{color:var(--blue);font-weight:600}
+
+/* nav bawah */
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:#fff;border-top:1px solid #000;display:flex;justify-content:space-around;padding:8px 0 10px}
+.bottom-nav a{display:flex;flex-direction:column;align-items:center;font-size:22px;color:#7a8794;gap:2px;flex:1;filter:grayscale(1);opacity:.7}
+.bottom-nav a span{font-size:10px;font-weight:600}
+.bottom-nav a.active{filter:none;opacity:1;color:var(--blue)}
+
+.success-page{min-height:70vh;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;padding:40px 8px}
+.success-page .check{width:110px;height:110px;border:10px solid #41e01f;border-radius:50%;display:grid;place-items:center;font-size:56px;color:#41e01f;margin-top:100px}
+
+/* ===== ANIMASI KECIL ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.12)}100%{transform:scale(1);opacity:1}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(245,158,11,.6)}70%{box-shadow:0 0 0 8px rgba(245,158,11,0)}100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}}
+
+/* 1. Isi halaman muncul satu per satu dari bawah */
+.content>*{animation:fadeUp .45s ease backwards}
+.content>*:nth-child(2){animation-delay:.06s}
+.content>*:nth-child(3){animation-delay:.12s}
+.content>*:nth-child(4){animation-delay:.18s}
+.content>*:nth-child(5){animation-delay:.24s}
+.content>*:nth-child(n+6){animation-delay:.3s}
+
+/* 2. Kartu & menu terangkat saat disentuh */
+.card,.menu-big,.menu-grid a,.role-card,.list-row,.stat,.product{transition:transform .2s ease,box-shadow .2s ease}
+.card:hover,.menu-big:hover,.menu-grid a:hover,.role-card:hover,.list-row:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(0,145,234,.25)}
+.menu-big:hover .ic,.menu-grid a:hover .ic{animation:floaty 1s ease-in-out infinite}
+
+/* 3. Tombol: naik saat hover, mengecil saat ditekan */
+.btn,.btn-sm,.pay,.choice-card label{transition:transform .15s ease,box-shadow .15s ease,filter .15s ease}
+.btn:hover,.btn-sm:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(0,0,0,.18);filter:brightness(1.05)}
+.btn:active,.btn-sm:active{transform:scale(.96)}
+.pay:hover,.choice-card label:hover{transform:scale(1.02)}
+
+/* 4. Input: bergeser halus saat fokus */
+.input{transition:outline .15s ease,transform .15s ease}
+.input:focus{transform:scale(1.01)}
+
+/* 5. Logo galon melayang di halaman awal */
+.logo-circle{animation:floaty 3s ease-in-out infinite}
+
+/* 6. Grafik laporan: batang tumbuh dari bawah */
+.chart .bar{transform-origin:bottom;animation:grow .7s cubic-bezier(.2,.8,.2,1) backwards}
+.chart .col:nth-child(2) .bar{animation-delay:.08s}
+.chart .col:nth-child(3) .bar{animation-delay:.16s}
+.chart .col:nth-child(4) .bar{animation-delay:.24s}
+.chart .col:nth-child(5) .bar{animation-delay:.32s}
+.chart .col:nth-child(6) .bar{animation-delay:.4s}
+.chart .col:nth-child(7) .bar{animation-delay:.48s}
+
+/* 7. Halaman "Pemesanan Berhasil": centang muncul membal */
+.success-page .check{animation:pop .6s cubic-bezier(.2,1.4,.4,1) .1s backwards}
+
+/* 8. Pesan sukses/error turun dari atas */
+.alert{animation:slideDown .35s ease}
+
+/* 9. Navigasi bawah: ikon aktif membal, ditekan mengecil */
+.bottom-nav a{transition:transform .2s ease,opacity .2s ease,filter .2s ease}
+.bottom-nav a:active{transform:scale(.82)}
+.bottom-nav a.active{animation:pop .35s ease}
+
+/* 10. Status "diproses" berdenyut */
+.badge.diproses{animation:pulse 1.6s infinite}
+
+/* Hormati pengguna yang mematikan animasi di perangkatnya */
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
