@@ -199,3 +199,21 @@ label.lbl{display:block;font-weight:700;font-size:13px;margin:16px 0 6px}
 
 /* Hormati pengguna yang mematikan animasi di perangkatnya */
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* ===== KOMPATIBILITAS BOOTSTRAP ===== */
+body{line-height:normal}
+p{margin-top:1em}
+
+/* tombol: samakan warna saat hover/fokus/ditekan */
+.btn{--bs-btn-color:var(--ink);--bs-btn-bg:var(--soft);--bs-btn-border-color:#333;--bs-btn-hover-color:var(--ink);--bs-btn-hover-bg:var(--soft);--bs-btn-hover-border-color:#333;--bs-btn-active-color:var(--ink);--bs-btn-active-bg:var(--soft);--bs-btn-active-border-color:#333;line-height:normal}
+.btn.primary{--bs-btn-color:#fff;--bs-btn-bg:var(--blue);--bs-btn-hover-color:#fff;--bs-btn-hover-bg:var(--blue);--bs-btn-active-color:#fff;--bs-btn-active-bg:var(--blue)}
+.btn.gray{--bs-btn-bg:#d9d9d9;--bs-btn-hover-bg:#d9d9d9;--bs-btn-active-bg:#d9d9d9}
+.btn.outline{--bs-btn-bg:#fff;--bs-btn-hover-bg:#fff;--bs-btn-active-bg:#fff;--bs-btn-border-color:var(--line);--bs-btn-hover-border-color:var(--line);--bs-btn-active-border-color:var(--line)}
+
+/* kartu & alert */
+.card{flex-direction:row;border:0}
+.alert{border:0}
+.alert-dismissible{padding-right:44px}
+
+/* baris rincian (Pembayaran & Laporan) */
+.summary-box .row,.detail .row{flex-wrap:nowrap;margin-left:0;margin-right:0}
+.summary-box .row>*,.detail .row>*{width:auto;max-width:none;padding:0;margin-top:0}
